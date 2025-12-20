@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dreamland English School | Best CBSE School Chhatrapati Sambhajinagar
+    </title>
+
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./Assets/Logo/LogowithBg 1.png" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Nunito:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS (Slider) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS (Appear on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-heading {
+        font-family: "Nunito", sans-serif;
+      }
+
+      /* Enhanced Bento Grid */
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 180px);
+        gap: 1rem;
+      }
+      @media (max-width: 1024px) {
+        .bento-grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(6, 150px);
+        }
+      }
+      @media (max-width: 768px) {
+        .bento-grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(8, 120px);
+        }
+      }
+
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        cursor: zoom-out;
+      }
+
+      .gallery-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+      .gallery-img-container img {
+        width: 100%;
+        height: 100%;
+        object-cover: cover;
+        transition: transform 0.5s ease;
+      }
+      .gallery-img-container:hover img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header/Nav -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2">
+          <img src="./Assets/Logo/DreamlandLogo.svg" alt="" class="w-[75px]" />
+          <a href="#" class="text-xl font-extrabold text-blue-900 font-heading">
+            DREAMLAND ENGLISH <span class="text-amber-500">SCHOOL</span>
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-8 font-semibold">
+          <a href="#home" class="hover:text-blue-600 transition">Home</a>
+          <a href="#about" class="hover:text-blue-600 transition">About</a>
+          <a href="#gallery" class="hover:text-blue-600 transition">Gallery</a>
+          <a href="#testimonials" class="hover:text-blue-600 transition"
+            >Testimonials</a
+          >
+          <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+        <a
+          href="admission-process.html"
+          class="bg-blue-900 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition"
+        >
+          Admission-Process
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative h-[85vh] flex items-center justify-center text-center text-white"
+    >
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
+      <img
+        src="./Assets/schoolImages/students_activity.png"
+        class="absolute inset-0 w-full h-full object-cover"
+        alt="School Building"
+      />
+      <div
+        class="relative z-20 px-4"
+        data-aos="zoom-out"
+        data-aos-duration="1500"
+      >
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+          Empowering Minds,<br />Enriching Lives.
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
+          Welcome to Dreamland English School, where we foster creativity,
+          character, and academic excellence.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a
+            href="#about"
+            class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg text-lg font-bold transition"
+            >Learn More</a
+          >
+          <a
+            href="#contact"
+            class="bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-lg text-lg font-bold transition"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section Teaser -->
+    <section id="about" class="py-24 container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <img
+            src="./Assets/schoolImages/about.jpg"
+            alt="Students"
+            class="rounded-2xl shadow-2xl"
+          />
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h2 class="text-4xl font-bold text-blue-900 mb-6">
+            Welcome to Our Legacy
+          </h2>
+          <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+            Founded in 1995, Dreamland English School has been a pioneer in
+            quality education. We believe that every child is unique and
+            deserves an environment that fosters both growth.
+          </p>
+          <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+            Our curriculum is designed to challenge students while providing the
+            support they need to succeed in an ever-changing world.
+          </p>
+          <a
+            href="about.html"
+            class="inline-block text-amber-600 font-bold text-lg hover:underline underline-offset-8 transition"
+            >Read More About Our Mission &rarr;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="py-20 bg-blue-50">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold text-center text-blue-900 mb-16"
+          data-aos="fade-up"
+        >
+          Our Leadership
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto items-center">
+          <!-- Director -->
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-2xl md:col-span-2 transition md:w-1/2 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="./Assets/schoolImages/Director.png"
+              class="w-60 h-60 mx-auto rounded-full object-cover border-4 border-amber-500 mb-6"
+              alt="Principal"
+            />
+            <h3 class="text-2xl font-bold text-blue-900">
+              Mrs.Sandhya Gaikwad
+            </h3>
+            <p class="text-amber-600 font-semibold mb-4">Director</p>
+            <p class="text-gray-600 italic">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              sit."
+            </p>
+          </div>
+
+          <!-- Principal -->
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-2xl transition"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="./Assets/schoolImages/principal.jpeg"
+              class="w-60 h-60 mx-auto rounded-full object-cover border-4 border-amber-500 mb-6"
+              alt="Principal"
+            />
+            <h3 class="text-2xl font-bold text-blue-900">Mrs.Priti Deshmukh</h3>
+            <p class="text-amber-600 font-semibold mb-4">Principal</p>
+            <p class="text-gray-600 italic">
+              "Welcome to our school, where we nurture strong values and
+              confident learners for a bright future."
+            </p>
+          </div>
+          <!-- Vice Principal -->
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-2xl transition"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="./Assets/schoolImages/vicePrincipal.jpeg"
+              class="w-60 h-60 mx-auto rounded-full object-cover border-4 border-amber-500 mb-6"
+              alt="Vice Principal"
+            />
+            <h3 class="text-2xl font-bold text-blue-900">Mrs.Sneha Sabnis</h3>
+            <p class="text-amber-600 font-semibold mb-4">Vice Principal</p>
+            <p class="text-gray-600 italic">
+              "We are committed to academic excellence, discipline, and
+              nurturing responsible learners for the future."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPANDED Bento Gallery Section -->
+    <section id="gallery" class="py-24 container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-blue-900 mb-4">School Gallery</h2>
+        <p class="text-gray-600">
+          Glimpses of life at Dreamland English School
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Item 1 (Big Square) -->
+        <div
+          class="gallery-img-container col-span-2 row-span-2"
+          data-aos="zoom-in"
+        >
+          <img
+            src="./Assets/schoolImages/sportsTeam.jpg"
+            class="gallery-img"
+            alt="Classroom Study"
+          />
+        </div>
+        <!-- Item 2 -->
+        <div
+          class="gallery-img-container col-span-1 row-span-1"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <img
+            src="./Assets/schoolImages/music.png"
+            class="gallery-img"
+            alt="Sports Day"
+          />
+        </div>
+        <!-- Item 3 -->
+        <div
+          class="gallery-img-container col-span-1 row-span-2"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <img
+            src="./Assets/schoolImages/abacus.jpg"
+            class="gallery-img"
+            alt="Library"
+          />
+        </div>
+        <!-- Item 4 -->
+        <div
+          class="gallery-img-container col-span-1 row-span-1"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <img
+            src="./Assets/schoolImages/library.png"
+            class="gallery-img"
+            alt="Science Lab"
+          />
+        </div>
+        <!-- Item 5 (Wide) -->
+        <div
+          class="gallery-img-container col-span-2 row-span-1"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <img
+            src="./Assets/schoolImages/girlSports.png"
+            class="gallery-img"
+            alt="Group Discussion"
+          />
+        </div>
+        <!-- Item 6 -->
+        <div
+          class="gallery-img-container col-span-1 row-span-1"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <img
+            src="./Assets/schoolImages/Complab.png"
+            class="gallery-img"
+            alt="Art Class"
+          />
+        </div>
+        <!-- Item 7 -->
+        <div
+          class="gallery-img-container col-span-1 row-span-1"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <img
+            src="./Assets/schoolImages/stemClass.jpg"
+            class="gallery-img"
+            alt="Music Room"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img
+        id="lightbox-img"
+        src=""
+        class="max-w-[85%] max-h-[85%] rounded-lg shadow-2xl transition-all duration-500 scale-95"
+      />
+    </div>
+
+    <!-- Student Achievements Slider -->
+    <section class="py-24 bg-gray-900 text-white overflow-hidden">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+          Student Achievements & Events
+        </h2>
+        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./Assets/schoolImages/karate.png"
+                class="w-full h-[450px] object-cover rounded-2xl"
+                alt="Winner 1"
+              />
+              <p class="mt-6 text-center text-xl font-bold text-amber-500">
+                Karate classes in our school
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./Assets/schoolImages/sci-exhibition.jpg"
+                class="w-full h-[450px] object-cover rounded-2xl"
+                alt="Winner 2"
+              />
+              <p class="mt-6 text-center text-xl font-bold text-amber-500">
+                Science Exhibition
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./Assets/schoolImages/robotics1.png"
+                class="w-full h-[450px] object-cover rounded-2xl"
+                alt="Winner 3"
+              />
+              <p class="mt-6 text-center text-xl font-bold text-amber-500">
+                Robotics workshop
+              </p>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="./Assets/schoolImages/meditation.png"
+                class="w-full h-[450px] object-cover rounded-2xl"
+                alt="Winner 3"
+              />
+              <p class="mt-6 text-center text-xl font-bold text-amber-500">
+                Meditation Classes
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination !-bottom-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 container mx-auto px-6">
+      <h2
+        class="text-4xl font-bold text-center text-blue-900 mb-16"
+        data-aos="fade-up"
+      >
+        What Parents & Students Say
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-amber-500"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="text-amber-500 text-3xl mb-4">"</div>
+          <p class="text-gray-600 italic mb-6">
+            "The teachers here are incredibly supportive. My daughter has grown
+            so much in her confidence and academic skills."
+          </p>
+          <h4 class="font-bold text-blue-900">- Mr. John Doe (Parent)</h4>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-blue-900"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="text-blue-900 text-3xl mb-4">"</div>
+          <p class="text-gray-600 italic mb-6">
+            "I love the science labs and the extra-curricular activities. School
+            is never boring at Dreamland!"
+          </p>
+          <h4 class="font-bold text-blue-900">- Jane D. (Grade 10 Student)</h4>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-amber-500"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="text-amber-500 text-3xl mb-4">"</div>
+          <p class="text-gray-600 italic mb-6">
+            "The best environment for overall development. The focus on values
+            is what makes this school different."
+          </p>
+          <h4 class="font-bold text-blue-900">- Mrs. Jane Doe (Parent)</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <!-- <section id="contact" class="py-24 bg-blue-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-4xl font-bold mb-6 text-amber-500">Get In Touch</h2>
+            <p class="text-lg mb-8 opacity-80">
+              Have questions? We're here to help. Reach out to us for admissions
+              or any other inquiries.
+            </p>
+            <div class="space-y-6">
+              <p class="flex items-center text-lg">
+                <span class="bg-blue-800 p-3 rounded-full mr-4">📍</span> 123
+                Education Lane, Dream City, 56789
+              </p>
+              <p class="flex items-center text-lg">
+                <span class="bg-blue-800 p-3 rounded-full mr-4">📞</span> +1
+                (234) 567-890
+              </p>
+              <p class="flex items-center text-lg">
+                <span class="bg-blue-800 p-3 rounded-full mr-4">✉️</span>
+                info@dreamlandschool.edu
+              </p>
+            </div>
+          </div>
+          <form
+            class="bg-white p-10 rounded-3xl text-gray-800 shadow-2xl"
+            data-aos="fade-left"
+            id="contactForm"
+          >
+            <div class="mb-4">
+              <label class="block mb-2 font-bold text-blue-900"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                required
+                id="name"
+                class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-amber-500 outline-none transition"
+                placeholder="John Doe"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 font-bold text-blue-900"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                required
+                id="email"
+                class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-amber-500 outline-none transition"
+                placeholder="john@example.com"
+              />
+            </div>
+            <div class="mb-6">
+              <label class="block mb-2 font-bold text-blue-900"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                required
+                class="w-full border-2 border-gray-100 p-3 rounded-xl h-32 focus:border-amber-500 outline-none transition"
+                placeholder="How can we help?"
+              ></textarea>
+            </div>
+            <button
+              class="w-full bg-amber-500 text-white font-bold py-4 rounded-xl hover:bg-amber-600 shadow-lg transition transform hover:-translate-y-1"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section> -->
+
+    <!--temp code-->
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-24 bg-blue-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-4xl font-bold mb-6 text-amber-500">Get In Touch</h2>
+            <p class="text-lg mb-8 opacity-80">
+              Have questions? We're here to help. Reach out to us for admissions
+              or any other inquiries.
+            </p>
+            <div class="space-y-6">
+              <p class="flex items-start text-lg">
+                <span class="bg-blue-800 p-3 rounded-full mr-4">📍</span>
+                Tuljabhavani Chowk, Near Shrinivas Shoppee, <br />Mayuri Park
+                Road, Hursool, <br />Chh. Sambhajinagar-431001
+              </p>
+              <p class="flex items-center text-lg">
+                <span class="bg-blue-800 p-3 rounded-full mr-4">📞</span>
+                8275326349 / 9049595746
+              </p>
+              <p class="flex items-center text-lg">
+                <span class="bg-blue-800 p-3 rounded-full mr-4">✉️</span>
+                dreamlandenglishschool16@gmail.com
+              </p>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-left">
+            <!-- Success Message (Hidden by default) -->
+            <div
+              id="successMessage"
+              class="hidden absolute inset-0 bg-white rounded-3xl z-30 flex flex-col items-center justify-center text-center p-10"
+            >
+              <div
+                class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-4xl mb-4"
+              >
+                ✓
+              </div>
+              <h3 class="text-2xl font-bold text-blue-900">Message Sent!</h3>
+              <p class="text-gray-600 mt-2">
+                Thank you for contacting Dreamland English School. We will get
+                back to you shortly.
+              </p>
+              <button
+                onclick="location.reload()"
+                class="mt-6 text-blue-600 font-bold hover:underline"
+              >
+                Send another message
+              </button>
+            </div>
+
+            <!-- Custom Styled Form -->
+            <!-- Replace 'YOUR_GOOGLE_FORM_URL' with your actual Form Action URL -->
+            <form
+              id="contactForm"
+              class="bg-white p-10 rounded-3xl text-gray-800 shadow-2xl transition-all duration-500"
+            >
+              <div class="mb-4">
+                <label class="block mb-2 font-bold text-blue-900"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-amber-500 outline-none transition"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <!-- New Phone Number Input -->
+              <div class="mb-4">
+                <label class="block mb-2 font-bold text-blue-900"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  pattern="[0-9]{10}"
+                  class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-amber-500 outline-none transition"
+                  placeholder="10-digit Mobile Number"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 font-bold text-blue-900"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full border-2 border-gray-100 p-3 rounded-xl focus:border-amber-500 outline-none transition"
+                  placeholder="example@mail.com"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label class="block mb-2 font-bold text-blue-900"
+                  >Your Message</label
+                >
+                <textarea
+                  name="message"
+                  required
+                  class="w-full border-2 border-gray-100 p-3 rounded-xl h-32 focus:border-amber-500 outline-none transition"
+                  placeholder="How can we help?"
+                ></textarea>
+              </div>
+
+              <button
+                id="submitBtn"
+                type="submit"
+                class="w-full bg-amber-500 text-white font-bold py-4 rounded-xl hover:bg-amber-600 shadow-lg transition transform hover:-translate-y-1"
+              >
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--temp code end-->
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-gray-500 border-t bg-white">
+      <p class="font-semibold text-blue-900 mb-2">DREAMLAND ENGLISH SCHOOL</p>
+      <p>&copy; 2025 Dreamland English School. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
