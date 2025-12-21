@@ -30,37 +30,36 @@
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-800">
+  <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
     <!-- Navigation (Consistent with Home) -->
+
     <nav class="bg-white shadow-md sticky top-0 z-50">
       <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-around md:justify-between items-center"
       >
-        <a
-          href="index.html"
-          class="text-xl font-extrabold text-blue-900 font-heading"
-          >DREAMLAND ENGLISH<span class="text-amber-500">SCHOOL</span></a
-        >
-        <div class="hidden md:flex space-x-8 font-semibold">
-          <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-          <a href="index.html#about" class="hover:text-blue-600 transition"
-            >About</a
+        <div class="flex items-center gap-2">
+          <img src="./Assets/Logo/DreamlandLogo.svg" alt="" class="w-[75px]" />
+          <a
+            href="#"
+            class="text-md sm:text-xl font-extrabold text-blue-900 font-heading whitespace-nowrap"
           >
-          <a href="index.html#gallery" class="hover:text-blue-600 transition"
-            >Gallery</a
-          >
-          <a href="admissions.html" class="text-blue-600 transition"
-            >Admissions</a
-          >
-          <a href="index.html#contact" class="hover:text-blue-600 transition"
-            >Contact</a
-          >
+            DREAMLAND ENGLISH <span class="text-amber-500">SCHOOL</span>
+          </a>
         </div>
-        <a
-          href="index.html#contact"
-          class="bg-blue-900 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition"
-          >Enquire Now</a
+        <div class="hidden md:flex space-x-8 font-semibold">
+          <a href="#home" class="hover:text-blue-600 transition">Home</a>
+          <a href="#about" class="hover:text-blue-600 transition">About</a>
+          <a href="#gallery" class="hover:text-blue-600 transition">Gallery</a>
+          <a href="#testimonials" class="hover:text-blue-600 transition"
+            >Testimonials</a
+          >
+          <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+        <div
+          class="bg-blue-900 inline-block p-4 rounded-full text-white text-md whitespace-nowrap"
         >
+          <a href="index.html#contact">Enquire Now</a>
+        </div>
       </div>
     </nav>
 
@@ -203,7 +202,7 @@
 
     <!-- Documents & Fees Section -->
     <section class="py-20 container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12">
+      <div class="flex flex-col sm:flex-row gap-12">
         <!-- Documents Required -->
         <div
           class="bg-white p-8 md:p-12 rounded-3xl shadow-lg"
@@ -291,7 +290,7 @@
 
           <!-- Contact Box -->
           <div
-            class="bg-white p-8 rounded-3xl shadow-lg border-2 border-blue-50"
+            class="bg-white p-8 rounded-3xl shadow-lg border-2 border-blue-50 overflow-x-hidden"
           >
             <h3 class="text-2xl font-bold text-blue-900 mb-6">
               School Location & Contact

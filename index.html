@@ -92,11 +92,14 @@
     <!-- Header/Nav -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
       <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-around md:justify-between items-center"
       >
         <div class="flex items-center gap-2">
           <img src="./Assets/Logo/DreamlandLogo.svg" alt="" class="w-[75px]" />
-          <a href="#" class="text-xl font-extrabold text-blue-900 font-heading">
+          <a
+            href="#"
+            class="text-md sm:text-xl font-extrabold text-blue-900 font-heading whitespace-nowrap"
+          >
             DREAMLAND ENGLISH <span class="text-amber-500">SCHOOL</span>
           </a>
         </div>
@@ -109,12 +112,11 @@
           >
           <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
         </div>
-        <a
-          href="admission-process.html"
-          class="bg-blue-900 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition"
+        <div
+          class="bg-blue-900 inline-block p-4 rounded-full text-white text-md whitespace-nowrap"
         >
-          Admission-Process
-        </a>
+          <a href="./admission-process.html">Admission Process</a>
+        </div>
       </div>
     </nav>
 
@@ -474,9 +476,9 @@
     >
       <div class="container mx-auto px-6">
         <div
-          class="flex flex-col md:flex-row gap-16 items-center justify-center"
+          class="flex flex-col md:flex-row gap-16 items-center justify-around"
         >
-          <div class="sm:w-1/2">
+          <div class="w-fit">
             <div class="w-fit overflow-x-hidden box-border" data-aos="fade-up">
               <h2 class="text-4xl font-bold mb-6 text-amber-500">
                 Get In Touch
@@ -503,7 +505,7 @@
             </div>
           </div>
 
-          <div class="relative sm:w-1/2" data-aos="fade-up">
+          <div class="relative w-full" data-aos="fade-up">
             <!-- Success Message (Hidden by default) -->
             <div
               id="successMessage"
