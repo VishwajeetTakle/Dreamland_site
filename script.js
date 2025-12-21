@@ -5,6 +5,13 @@ AOS.init({
   offset: 100,
 });
 
+AOS.init({
+  once: true,
+  disable: function () {
+    return window.innerWidth < 768;
+  },
+});
+
 // Swiper Initialization
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,

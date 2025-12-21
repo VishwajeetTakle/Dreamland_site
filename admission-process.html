@@ -337,6 +337,13 @@
         duration: 1000,
         once: true,
       });
+
+      AOS.init({
+        once: true,
+        disable: function () {
+          return window.innerWidth < 768;
+        },
+      });
     </script>
   </body>
 </html>
